@@ -23,6 +23,6 @@ from django.views.generic.base import TemplateView    #add basic TemplateView to
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html', extra_context={'now': timezone.now()}), name='home'),
-    path('test', TemplateView.as_view(template_name='test.html', extra_context={'now': timezone.now()}), name='test'),
+    path('test/', TemplateView.as_view(template_name='test.html', extra_context={'now': timezone.now()}), name='test'),
     path('admin/', admin.site.urls),
 ]
