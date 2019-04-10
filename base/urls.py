@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url, include
 from django.urls import path
+from datetime import datetime
+from django.utils import timezone
+from django.views.generic.base import TemplateView    #add basic TemplateView to display page(s)
+
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='index.html', extra_context={'now': timezone.now()}), name='home'),
+    path('test', TemplateView.as_view(template_name='test.html', extra_context={'now': timezone.now()}), name='test'),
     path('admin/', admin.site.urls),
 ]
