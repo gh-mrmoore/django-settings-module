@@ -1,3 +1,4 @@
+import os
 import django_heroku
 
 TIME_ZONE = 'America/New_York'
