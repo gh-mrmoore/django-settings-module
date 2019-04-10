@@ -1,6 +1,8 @@
 import os
 import django_heroku
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 TIME_ZONE = 'America/New_York'
 
 STATIC_URL = '/static/'
