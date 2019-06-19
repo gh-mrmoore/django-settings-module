@@ -1,6 +1,7 @@
 # my additions
 scratch/
 local.py
+dj-settings/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
